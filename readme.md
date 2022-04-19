@@ -45,4 +45,8 @@ Petclinic uses an in-memory database (HSQLDB) which gets populated at startup wi
 
 ## License
 
-[![License](https://img.shields.io/badge/License-Apache%202.0-yellowgreen.svg)](LICENSE)  
+[![License](https://img.shields.io/badge/License-Apache%202.0-yellowgreen.svg)](LICENSE)
+
+##Group members:
+
+Saleem Abu Hamam, Marc-Andre Orthmann, Jori Moci
