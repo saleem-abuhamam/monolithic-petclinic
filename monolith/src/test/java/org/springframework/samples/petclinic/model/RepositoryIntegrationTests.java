@@ -19,11 +19,8 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.samples.petclinic.db.RevenueRepository;
-import org.springframework.samples.petclinic.vet.db.VetRepository;
 import org.springframework.samples.petclinic.db.VisitRepository;
-import org.springframework.samples.petclinic.vet.model.Vet;
 
-import java.util.Collection;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
