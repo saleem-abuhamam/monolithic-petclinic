@@ -12,7 +12,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 @SpringBootTest
 public class VetServiceTests {
     @Autowired
-    VetService vetService;
+    VetServiceInterface vetService;
 
     @Test
     void shouldFindVets() {

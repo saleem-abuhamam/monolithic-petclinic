@@ -10,8 +10,8 @@ import java.util.Collection;
 import java.util.LinkedList;
 import java.util.stream.Collectors;
 
-@Service
-public class VetService {
+
+public class VetService implements VetServiceInterface {
 
     private final VetRepository vets;
 
@@ -19,6 +19,7 @@ public class VetService {
         this.vets = vets;
     }
 
+    @Override
     public Collection<VetDTO> allVets() {
         return mapToDto(this.vets.findAll());
     }
