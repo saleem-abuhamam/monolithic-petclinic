@@ -13,8 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.springframework.samples.petclinic.model;
+package org.springframework.samples.petclinic.vet.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
@@ -25,6 +26,20 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "specialties")
-public class Specialty extends NamedEntity {
+public class Specialty extends BaseEntity {
+    @Column(name = "name")
+    private String name;
 
+    public String getName() {
+        return this.name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return this.getName();
+    }
 }
