@@ -1,4 +1,4 @@
-package org.springframework.samples.petclinic;
+package org.springframework.samples.petclinic.vet;
 
 import com.github.tomakehurst.wiremock.WireMockServer;
 import org.junit.jupiter.api.AfterEach;
@@ -28,12 +28,12 @@ public class WiremockDemoTest {
 
     @Test
     void how_to_stub_a_server_with_wiremock() {
-        wireMock.stubFor(get(urlEqualTo("/demo"))
+        wireMock.stubFor(get(urlEqualTo("/api"))
             .willReturn(aResponse()
                 .withHeader("Content-Type", "application/json")
                 .withBody("[\"James\", \"Helen\" ]")));
 
-        String[] result = new RestTemplate().getForObject("http://localhost:8089/demo", String[].class);
+        String[] result = new RestTemplate().getForObject("http://localhost:8089/api", String[].class);
 
         assertThat(result).containsExactly("James", "Helen");
     }

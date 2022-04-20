@@ -32,7 +32,6 @@ public class VetService {
             dto.setSpecialties(vet.getSpecialties().stream().map(Specialty::getName).collect(Collectors.toList()));
             dto.setNrOfSpecialties(vet.getNrOfSpecialties());
             collection.add(dto);
-
         }
         return collection;
     }
